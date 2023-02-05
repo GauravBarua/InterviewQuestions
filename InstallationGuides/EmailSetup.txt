@@ -18,3 +18,11 @@ Tick on Use SMTP Authentication and SSL
 Give username as original that of gmail and password give that app password which u created above.
 SMTP Port: 465 (for gmail)
 then test connection!
+
+For the Pipeline:
+--------------------------
+post {
+		always {
+			mail bcc: '', body: "<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL of the build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "${currentBuild.result} CI: Project name -> ${env.JOB_NAME}", to: "gauravbarua005@gmail.com";  
+		}
+	}
