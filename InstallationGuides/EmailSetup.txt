@@ -1,0 +1,20 @@
+For Gmail:
+---------------------------------------------
+Go to Manage Your Google Account
+Click on the security tab
+Now since Less secure app access option is disable from May 30, 2022
+We Must create an App password to By pass this.
+Enable sign-in in with 2-step verification first.
+Then Generate the App password and use this password instead of the original gmail password wherever you want the connection to be established.
+-------------------------------------------------
+
+Setting Up in Jenkins:
+------------------------------------------------
+Go to Configure System
+Go to the bottom most for Email Notifications Options(For testinig purpose)
+SMTP Server: smtp.gmail.com (for gmail)
+Then click On advanced options
+Tick on Use SMTP Authentication and SSL
+Give username as original that of gmail and password give that app password which u created above.
+SMTP Port: 465 (for gmail)
+then test connection!
